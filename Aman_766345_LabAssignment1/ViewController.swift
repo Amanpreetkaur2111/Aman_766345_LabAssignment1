@@ -15,6 +15,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var ZoomIn: UIButton!
+    @IBOutlet weak var zoomOut: UIButton!
     var address = ""
     @IBOutlet weak var RouteBtn: UIButton!
     let LocationManager = CLLocationManager()
@@ -38,8 +40,53 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         
        
 }
+    
+    
+    @IBAction func walk(_ sender: Any) {
+        if coordinate != nil {
+    mapView.removeOverlays(mapView.overlays)
+  show_Direction(destination: coordinate, type: .walking)
+        }
+        
+        }
+        
+    
+    
+    
+    @IBAction func automobile(_ sender: Any) {
+        if coordinate != nil {
+            
+            mapView.removeOverlays(mapView.overlays)
+            show_Direction(destination: coordinate, type: .automobile)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func zoomInAction(_ sender: Any) {
+        
+        var Zooom = mapView.region
+               Zooom.span.latitudeDelta = Zooom.span.latitudeDelta/2
+               Zooom.span.longitudeDelta = Zooom.span.longitudeDelta/2
+               mapView.setRegion(Zooom, animated: true)
+        
+    }
+    
+    
+    @IBAction func ZoomoutAction(_ sender: Any) {
+        var Zooom = mapView.region
+        Zooom.span.latitudeDelta = Zooom.span.latitudeDelta*2
+        Zooom.span.longitudeDelta = Zooom.span.longitudeDelta*2
+        mapView.setRegion(Zooom, animated: true)
+        
+        
+    }
+    
+    
+    
     @IBAction func RouteBtn_Action(_ sender: Any) {
-       show_Direction(destination: coordinate)
+        show_Direction(destination: coordinate, type:  .automobile)
     }
     
    @objc func doubleTapped(gestureRecognizer: UIGestureRecognizer){
@@ -47,6 +94,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
     let t_Point = gestureRecognizer.location(in: mapView)
      coordinate = mapView.convert(t_Point, toCoordinateFrom: mapView)
     let annotation = MKPointAnnotation()
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeOverlays(mapView.overlays)
         
        CLGeocoder().reverseGeocodeLocation(CLLocation(coordinate: coordinate, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, course: 0, speed: 0, timestamp: Date())) { (placemark, error) in
                                  
@@ -63,9 +112,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
                                  }
                              }
                              
-                        annotation.title = address
-                        annotation.coordinate = coordinate
-                        mapView.addAnnotation(annotation)
+                annotation.title = address
+                annotation.coordinate = coordinate
+                mapView.addAnnotation(annotation)
              
               
           }
@@ -75,7 +124,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
 //        mapView.addAnnotation(annotation)
 
     }
-    func show_Direction(destination: CLLocationCoordinate2D){
+    func show_Direction(destination: CLLocationCoordinate2D, type: MKDirectionsTransportType){
+        
+        if destination != nil {
         
     let sourceCoordinate = mapView.annotations[0].coordinate
     let destinationCoordinate = mapView.annotations[1].coordinate
@@ -106,7 +157,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
             print(route)
             self.mapView.addOverlay(route.polyline)
         }
-         
+        } else {
+            
+        }
        
     }
     

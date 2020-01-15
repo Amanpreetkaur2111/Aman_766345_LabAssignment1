@@ -16,6 +16,10 @@
 		9BA9FC3223CE6432000A7509 /* Aman_766345_LabAssignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA9FC3123CE6432000A7509 /* Aman_766345_LabAssignment1Tests.swift */; };
 		9BA9FC3D23CE6433000A7509 /* Aman_766345_LabAssignment1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA9FC3C23CE6433000A7509 /* Aman_766345_LabAssignment1UITests.swift */; };
 		9BA9FC4B23CE6451000A7509 /* locationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA9FC4A23CE6451000A7509 /* locationButton.png */; };
+		9BA9FC4D23CEA09F000A7509 /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA9FC4C23CEA09F000A7509 /* wheel.png */; };
+		9BA9FC4F23CEA2A6000A7509 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA9FC4E23CEA2A6000A7509 /* walk.png */; };
+		9BA9FC5123CEA44C000A7509 /* zoom+.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA9FC5023CEA44C000A7509 /* zoom+.png */; };
+		9BA9FC5323CEA451000A7509 /* zoom_.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BA9FC5223CEA451000A7509 /* zoom_.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		9BA9FC3C23CE6433000A7509 /* Aman_766345_LabAssignment1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aman_766345_LabAssignment1UITests.swift; sourceTree = "<group>"; };
 		9BA9FC3E23CE6433000A7509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA9FC4A23CE6451000A7509 /* locationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationButton.png; sourceTree = "<group>"; };
+		9BA9FC4C23CEA09F000A7509 /* wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel.png; sourceTree = "<group>"; };
+		9BA9FC4E23CEA2A6000A7509 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
+		9BA9FC5023CEA44C000A7509 /* zoom+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom+.png"; sourceTree = "<group>"; };
+		9BA9FC5223CEA451000A7509 /* zoom_.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zoom_.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +113,11 @@
 				9BA9FC1C23CE6432000A7509 /* SceneDelegate.swift */,
 				9BA9FC1E23CE6432000A7509 /* ViewController.swift */,
 				9BA9FC4A23CE6451000A7509 /* locationButton.png */,
+				9BA9FC4E23CEA2A6000A7509 /* walk.png */,
 				9BA9FC2023CE6432000A7509 /* Main.storyboard */,
+				9BA9FC5023CEA44C000A7509 /* zoom+.png */,
+				9BA9FC5223CEA451000A7509 /* zoom_.jpg */,
+				9BA9FC4C23CEA09F000A7509 /* wheel.png */,
 				9BA9FC2323CE6432000A7509 /* Assets.xcassets */,
 				9BA9FC2523CE6432000A7509 /* LaunchScreen.storyboard */,
 				9BA9FC2823CE6432000A7509 /* Info.plist */,
@@ -236,6 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA9FC2723CE6432000A7509 /* LaunchScreen.storyboard in Resources */,
+				9BA9FC4D23CEA09F000A7509 /* wheel.png in Resources */,
+				9BA9FC5123CEA44C000A7509 /* zoom+.png in Resources */,
+				9BA9FC4F23CEA2A6000A7509 /* walk.png in Resources */,
+				9BA9FC5323CEA451000A7509 /* zoom_.jpg in Resources */,
 				9BA9FC2423CE6432000A7509 /* Assets.xcassets in Resources */,
 				9BA9FC4B23CE6451000A7509 /* locationButton.png in Resources */,
 				9BA9FC2223CE6432000A7509 /* Main.storyboard in Resources */,

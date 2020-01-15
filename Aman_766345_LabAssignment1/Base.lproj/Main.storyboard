@@ -27,13 +27,48 @@
                                     <action selector="RouteBtn_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jq-My-DjB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lie-Py-4m6">
+                                <rect key="frame" x="317" y="47" width="28" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="walk.png"/>
+                                <connections>
+                                    <action selector="walk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eY7-es-OFh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbG-FS-o6l">
+                                <rect key="frame" x="310" y="97" width="35" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="wheel.png"/>
+                                <connections>
+                                    <action selector="automobile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wnn-bV-2Sw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Ec-dc7">
+                                <rect key="frame" x="312" y="204" width="30" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="zoom_.jpg"/>
+                                <connections>
+                                    <action selector="ZoomoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMK-uj-GaV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHj-kk-v3F">
+                                <rect key="frame" x="316" y="149" width="29" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="zoom+.png"/>
+                                <connections>
+                                    <action selector="zoomInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qic-cd-Jlt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="RouteBtn" destination="AWs-Rg-mQG" id="Pne-gN-xwZ"/>
+                        <outlet property="ZoomIn" destination="WHj-kk-v3F" id="RdN-25-c8H"/>
                         <outlet property="mapView" destination="lrn-ey-u6t" id="GfL-TU-45i"/>
+                        <outlet property="zoomOut" destination="lq3-Ec-dc7" id="Szv-ys-LTC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,5 +78,9 @@
     </scenes>
     <resources>
         <image name="locationButton.png" width="67" height="67"/>
+        <image name="walk.png" width="216" height="233"/>
+        <image name="wheel.png" width="225" height="225"/>
+        <image name="zoom+.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="zoom_.jpg" width="617" height="626"/>
     </resources>
 </document>
