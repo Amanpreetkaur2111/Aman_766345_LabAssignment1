@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrn-ey-u6t">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrn-ey-u6t">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -23,13 +23,16 @@
                                 <rect key="frame" x="273" y="554" width="67" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="locationButton.png"/>
+                                <connections>
+                                    <action selector="RouteBtn_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jq-My-DjB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="RouteBtn" destination="AWs-Rg-mQG" id="x79-Wt-rbr"/>
+                        <outlet property="RouteBtn" destination="AWs-Rg-mQG" id="Pne-gN-xwZ"/>
                         <outlet property="mapView" destination="lrn-ey-u6t" id="GfL-TU-45i"/>
                     </connections>
                 </viewController>
